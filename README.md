@@ -3,11 +3,11 @@
 </h1>
 
 <h4 align="center"> 
-	Semana OmniStack 11.0
+	OmniStack Week 11
 </h4>
 <p align="center">
   <a href="https://www.linkedin.com/in/khalleb/">
-    <img alt="Made by khalleb" src="https://img.shields.io/badge/made%20by-DanielObara-%2304D361">
+    <img alt="Made by khalleb" src="https://img.shields.io/badge/made%20by-Khalleb-%2304D361">
   </a>
 
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/khalleb/be-the-hero">
@@ -23,7 +23,6 @@
   <a href="#-project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-how-to-contribute">How to contribute</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#memo-license">License</a>
 </p>
 
 <br>
@@ -35,8 +34,8 @@ This project was developed with the following technologies:
 
 - [Node.js](https://nodejs.org/en/) 
 - [React](https://reactjs.org)
-- [React Native](https://facebook.github.io/react-native/) in coming :construction:
-- [Expo](https://expo.io/) in coming :construction:
+- [React Native](https://facebook.github.io/react-native/)
+- [Expo](https://expo.io/)
 
 ## 💻 Project
 
@@ -46,10 +45,6 @@ Be The Hero is a project that aims to connect people who are willing to help ONG
     <img alt="Login-Page" title="Login-Page" src=".github/login-page.png" width="450px" />
 </h1>
 
-## 🔖 Layout
-
-:construction: In progress.. :construction:
-
 ## 🤔 How to contribute
 
 - Make a fork;
@@ -58,11 +53,3 @@ Be The Hero is a project that aims to connect people who are willing to help ONG
 - Make a push to your branch: `git push origin my-feature`.
 
 After merging your receipt request to done, you can delete a branch from yours.
-
-## :memo: License
-
-This project is under the MIT license. See the [LICENSE](LICENSE.md) for details.
-
----
-
-Made with ♥ by Daniel Obara :wave: [Get in touch!](https://www.linkedin.com/in/danielobara/)
