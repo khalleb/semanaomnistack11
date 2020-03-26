@@ -6,7 +6,7 @@
 	OmniStack Week 11
 </h4>
 <p align="center">
-  <a href="https://www.linkedin.com/in/khalleb/">
+  <a target="_blank" href="https://www.linkedin.com/in/khalleb/">
     <img alt="Made by khalleb" src="https://img.shields.io/badge/made%20by-Khalleb-%2304D361">
   </a>
 
