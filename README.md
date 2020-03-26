@@ -1,28 +1,19 @@
 <h1 align="center">
-    <img alt="BeTheHero" title="#BeTheHero" src=".github/week-11.png" width="380px" />
+    <img alt="BeTheHero" title="#Be The Hero" src=".github/logo.svg" width="380px" />
 </h1>
 
 <h4 align="center"> 
-	:construction: 🚀 Semana OmniStack 11.0 In progress.. :construction:
+	Semana OmniStack 11.0
 </h4>
 <p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/DanielObara/SemanaOmnistack11?color=%2304D361">
-
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/DanielObara/SemanaOmnistack11">
-	
-  <a href="https://www.linkedin.com/in/danielobara/">
-    <img alt="Made by DanielObara" src="https://img.shields.io/badge/made%20by-DanielObara-%2304D361">
+  <a href="https://www.linkedin.com/in/khalleb/">
+    <img alt="Made by khalleb" src="https://img.shields.io/badge/made%20by-DanielObara-%2304D361">
   </a>
 
-  <a href="https://github.com/DanielObara/SemanaOmnistack11/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/DanielObara/SemanaOmnistack11">
-  </a>
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/khalleb/be-the-hero">
 
-  <a href="https://github.com/DanielObara/SemanaOmnistack11/issues">
-    <img alt="Repository issues" src="https://img.shields.io/github/issues/DanielObara/SemanaOmnistack11">
-  </a>
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/khalleb/be-the-hero?color=%2304D361">
 
-  <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
 </p>
 <p align="center">
   <a href="https://insomnia.rest/run/?label=SemanaOmnistack11&uri=https%3A%2F%2Fraw.githubusercontent.com%2FDanielObara%2FSemanaOmnistack11%2Fmaster%2FInsomnia_2020-03-24.json" target="_blank"><img src="https://insomnia.rest/images/run.svg" alt="Run in Insomnia"></a>
