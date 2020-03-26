@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="BeTheHero" title="#Be The Hero" src=".github/logo.svg" width="380px" />
+    <img alt="BeTheHero" title="#Be The Hero" src=".github/logo.svg" width="280px" />
 </h1>
 
 <h4 align="center"> 
@@ -27,8 +27,9 @@
 <br>
 
 ## 💻 Project
-
-Be The Hero is a project that aims to connect people who are willing to help ONGs.
+<p align="center">
+  <strong>Be The Hero is a project that aims to connect people who are willing to help ONGs.</strong>
+</p>
 
 <h1 align="center">
     <img alt="Login-Page" title="Login-Page" src=".github/heroes.png" width="350px" />
