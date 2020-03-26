@@ -21,7 +21,6 @@
 <p align="center">
   <a href="#rocket-Technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-how-to-contribute">How to contribute</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
 
@@ -42,7 +41,7 @@ This project was developed with the following technologies:
 Be The Hero is a project that aims to connect people who are willing to help ONGs.
 
 <h1 align="center">
-    <img alt="Login-Page" title="Login-Page" src=".github/login-page.png" width="450px" />
+    <img alt="Login-Page" title="Login-Page" src=".github/heroes.png" width="450px" />
 </h1>
 
 ## 🤔 How to contribute
