@@ -26,3 +26,12 @@ $ npm install sqlite3
 - Configurando o banco de dados
 * Criando o arquivo de configuração
 $ npx knex init
+
+- Criando arquivo de configuracao para criar a tabelas
+$ npx knex migrate:make create_ongs
+
+- Após ter criando a estrutura da tabela, é necessário executar o seguinte comando para criar o banco de dados
+$ npx knex migrate:latest
+
+- Instalação do cors - Determina que vai poder acessar aplicação
+$ npm install cors
