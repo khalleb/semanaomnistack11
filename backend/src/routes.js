@@ -1,14 +1,16 @@
 const express = require('express');
 const { celebrate, Joi, Segments } = require('celebrate');
 
+const SessionController = require('./controllers/SessionController');
+const InternationalizationController = require('./controllers/internationalization/InternationalizationController');
 const OngController = require('./controllers/OngController');
 const IncidentsController = require('./controllers/IncidentController');
 const ProfileController = require('./controllers/ProfileController');
-const SessionController = require('./controllers/SessionController');
 
 const routes = express.Router();
 
 routes.post('/sessions', SessionController.create);
+routes.get('/internationalization', InternationalizationController.get);
 
 routes.get('/ongs', OngController.list)
 
