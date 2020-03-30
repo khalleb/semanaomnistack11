@@ -1,7 +1,7 @@
-const connection = require('../database/connection');
+const connection = require('../../database/connection');
 
 module.exports = {
-  async create(request, response) {
+  async create(request, response, callback) {
     const { id } = request.body;
 
     const ong = await connection('ongs')
@@ -11,8 +11,7 @@ module.exports = {
     if (!ong) {
       return response.status(400).json({ error: 'Não encontrado uma ONG com esse ID' });
     }
-
-    return response.json(ong);
-
+    callback({ ong })
+    //return response.json(ong);
   }
 }

@@ -34,7 +34,7 @@ export default function Register() {
       alert('Error' + error)
     }
   }
-  
+
   return (
     <div className="regiter-container">
       <div className="content">

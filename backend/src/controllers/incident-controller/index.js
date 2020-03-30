@@ -1,7 +1,7 @@
-const connection = require('../database/connection');
+const connection = require('../../database/connection');
 
 module.exports = {
-  async list(request, response) {
+  async list(request, response, callback) {
     const { page = 1 } = request.query;
     const [count] = await connection('incidents').count();
     const incidents = await connection('incidents')
@@ -15,10 +15,11 @@ module.exports = {
         'ongs.city',
         'ongs.uf']);
     response.header('X-Total-Count', count['count(*)'])
-    return response.json(incidents);
+    callback({incidents});
+    // return response.json(incidents);
   },
 
-  async create(request, response) {
+  async create(request, response, callback) {
     const { title, description, value } = request.body;
     const ong_id = request.headers.authorization;
 
@@ -28,9 +29,10 @@ module.exports = {
       value,
       ong_id
     });
-    return response.json({ id })
+    callback({ id })
+    //return response.json({ id })
   },
-  async delete(request, response) {
+  async delete(request, response, callback) {
     const ong_id = request.headers.authorization;
     const { id } = request.params;
 
@@ -43,6 +45,7 @@ module.exports = {
       return response.status(401).json({ error: 'Operação não permitida' });
     }
     await connection('incidents').where('id', id).delete();
-    return response.status(204).send();
+    callback()
+    //return response.status(204).send();
   }
 };

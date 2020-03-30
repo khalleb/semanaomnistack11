@@ -1,15 +1,16 @@
-const generateUniqueId = require('../utils/generateUniqueId');
-const connection = require('../database/connection');
+const generateUniqueId = require('../../utils/generateUniqueId');
+const connection = require('../../database/connection');
 
 module.exports = {
   async list(request, response) {
     const ongs = await connection('ongs').select('*');
-    return response.json(ongs);
+    response({ ongs })
   },
 
-  async create(request, response) {
+  async create(request, response, callback) {
     const { name, email, whatsapp, city, uf } = request.body;
-    const id = generateUniqueId() ;
+    const id = generateUniqueId();
+    console.log(name, email, whatsapp, city, uf);
     await connection('ongs').insert({
       id,
       name,
@@ -18,6 +19,6 @@ module.exports = {
       city,
       uf
     });
-    return response.json({ id })
+    callback({ id })
   }
 };

@@ -1,3 +1,19 @@
 {
-  "test": "teste"
+  "logon": {
+    "makeYourWish": "Faça seu pedido",
+    "yourID": "Sua ID",
+    "enter": "Entrar",
+    "iHaveNoRegistration": "Não tenho cadastro"
+  },
+  "ong": {
+    "register": "Cadastro",
+    "labelInfo": "Faça seu cadastro, entre na platforma e ajude pessoas a encontrarem os casos de sua ONG.",
+    "iRaveRegistration": "Já tenho cadastro",
+    "nameONG": "Nome da ONG",
+    "email": "E-mail",
+    "whatsApp": "WhatsApp",
+    "city": "Cidade",
+    "uf": "UF",
+    "newRegister": "Cadastar"
+  }
 }
