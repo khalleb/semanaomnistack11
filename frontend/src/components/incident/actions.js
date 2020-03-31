@@ -4,7 +4,7 @@ import { toastr } from 'react-redux-toastr';
 
 export async function handleIncident() {
   return async (dispatch, getState) => {
-    const { settings: { api, history }, form: { incident_form } } = getState();
+    const { settings: { api, $t, history }, form: { incident_form } } = getState();
     const url = `${api}/incidents`;
     const values = _.get(incident_form, 'values', {});
     const ongId = localStorage.getItem('_TOKEN');
@@ -15,11 +15,11 @@ export async function handleIncident() {
     }
     await axios.post(url, data, { headers: { Authorization: ongId } })
       .then(async function (response) {
-        toastr.success('Sucesso', 'Salvo com sucesso');
+        toastr.success($t('messages.success'), $t('incident.success.successSave'));
         history.push('/profile');
       })
       .catch(async function (error) {
-        toastr.success('Atenção', 'Erro ao salvar');
+        toastr.error($t('messages.alert'), $t('incident.errors.errorSave'));
       });
   }
 }

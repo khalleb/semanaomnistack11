@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
 import { reducer as formReducer } from 'redux-form'
-import { reducer as toastrReducer } from 'react-redux-toastr'
+import { reducer as toastrReducer } from 'react-redux-toastr';
 import app from './reducers'
 import session from '../../components/auth/reducers'
 import ong from '../../components/ong/reducers'

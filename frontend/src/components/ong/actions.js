@@ -4,7 +4,7 @@ import { toastr } from 'react-redux-toastr'
 
 export async function handleOng() {
   return async (dispatch, getState) => {
-    const { settings: { api,  history }, form: { ong_form } } = getState();
+    const { settings: { api, $t, history }, form: { ong_form } } = getState();
     const url = `${api}/ongs`;
     const values = _.get(ong_form, 'values', {});
     const data = {
@@ -16,11 +16,11 @@ export async function handleOng() {
     }
     await axios.post(url, data)
       .then(async function (response) {
-        toastr.success('Sucesso','Salvo com sucesso');
+        toastr.success($t('messages.success'), $t('ong.success.successSave'));
         history.push('/');
       })
       .catch(async function (error) {
-        toastr.success('Atenção','Erro ao salvar');
+        toastr.error($t('messages.alert'), $t('ong.errors.errorSave'));
       });
   }
 }

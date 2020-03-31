@@ -1,9 +1,17 @@
 {
+  "messages": {
+    "success": "Sucesso",
+    "alert": "Atenção",
+    "error": "Erro"
+  },
   "logon": {
     "makeYourWish": "Faça seu pedido",
     "yourID": "Sua ID",
     "enter": "Entrar",
-    "iHaveNoRegistration": "Não tenho cadastro"
+    "iHaveNoRegistration": "Não tenho cadastro",
+    "errors": {
+      "authInvalid": "ID inválido"
+    }
   },
   "ong": {
     "register": "Cadastro",
@@ -14,7 +22,13 @@
     "whatsApp": "WhatsApp",
     "city": "Cidade",
     "uf": "UF",
-    "newRegister": "Cadastar"
+    "newRegister": "Cadastar",
+    "success": {
+      "successSave": "ONG salva com sucesso"
+    },
+    "errors": {
+      "errorSave": "Erro ao salvar a ONG"
+    }
   },
   "profile": {
     "welcome": "Bem-vindo",
@@ -22,7 +36,14 @@
     "registeredCases": "Casos cadastrados",
     "case": "CASO",
     "description": "DESCRIÇÃO",
-    "value": "VALOR"
+    "value": "VALOR",
+    "success": {
+      "deleteSuccess": "Caso removido"
+    },
+    "errors": {
+      "errorRemove": "Erro ao remover o caso",
+      "errorList": "Erro ao listar os casos"
+    }
   },
   "incident": {
     "registerNewCase": "Cadastrar novo caso",
@@ -31,6 +52,12 @@
     "caseTitle": "Título de caso",
     "description": "Descrição",
     "value": "Valor",
-    "newRegister": "Cadastar"
+    "newRegister": "Cadastar",
+    "success": {
+      "successSave": "Caso salva com sucesso"
+    },
+    "errors": {
+      "errorSave": "Erro ao salvar o caso"
+    }
   }
 }
