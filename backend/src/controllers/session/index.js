@@ -12,6 +12,5 @@ module.exports = {
       return response.status(400).json({ error: 'Não encontrado uma ONG com esse ID' });
     }
     callback({ ong })
-    //return response.json(ong);
   }
 }

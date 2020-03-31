@@ -19,7 +19,6 @@ routes.post(`${moduleRoute}`, celebrate({
     uf: Joi.string().required().length(2),
   })
 }), (req, res) => {
-  console.log('111111111111111111111');
   Controller.create(req, res, callback(res))
 })
 

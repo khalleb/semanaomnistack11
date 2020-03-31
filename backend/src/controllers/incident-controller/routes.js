@@ -26,5 +26,4 @@ routes.delete(`${moduleRoute}/:id`, celebrate({
   Controller.delete(req, res, callbackFn(res))
 })
 
-
 module.exports = routes;

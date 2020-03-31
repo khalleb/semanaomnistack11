@@ -1,9 +1,10 @@
 import axios from "axios"
 import _ from 'lodash'
+import { toastr } from 'react-redux-toastr'
 
 export async function handleOng() {
   return async (dispatch, getState) => {
-    const { settings: { api, $t, history }, form: { ong_form } } = getState();
+    const { settings: { api,  history }, form: { ong_form } } = getState();
     const url = `${api}/ongs`;
     const values = _.get(ong_form, 'values', {});
     const data = {
@@ -13,16 +14,13 @@ export async function handleOng() {
       city: _.get(values, 'city'),
       uf: _.get(values, 'uf')
     }
-    debugger
-   await axios.post(url, data)
+    await axios.post(url, data)
       .then(async function (response) {
-        debugger
-        let data = _.get(response, 'data', {});
-        console.log(data);
+        toastr.success('Sucesso','Salvo com sucesso');
+        history.push('/');
       })
       .catch(async function (error) {
-        console.log(error);
-        debugger
+        toastr.success('Atenção','Erro ao salvar');
       });
   }
 }

@@ -15,8 +15,7 @@ module.exports = {
         'ongs.city',
         'ongs.uf']);
     response.header('X-Total-Count', count['count(*)'])
-    callback({incidents});
-    // return response.json(incidents);
+    callback({ incidents });
   },
 
   async create(request, response, callback) {
@@ -30,9 +29,9 @@ module.exports = {
       ong_id
     });
     callback({ id })
-    //return response.json({ id })
   },
   async delete(request, response, callback) {
+    const { list } = module.exports;
     const ong_id = request.headers.authorization;
     const { id } = request.params;
 
@@ -45,7 +44,9 @@ module.exports = {
       return response.status(401).json({ error: 'Operação não permitida' });
     }
     await connection('incidents').where('id', id).delete();
-    callback()
-    //return response.status(204).send();
+
+    await list({ query: { page: 1 } }, response, (incidents) => {
+      callback(incidents)
+    });
   }
 };

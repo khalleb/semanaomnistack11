@@ -1,0 +1,1 @@
+export const LIST_INCIDENTS = 'LIST_INCIDENTS'

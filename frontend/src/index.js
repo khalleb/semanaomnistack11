@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { applyMiddleware, createStore } from 'redux';
 import { Provider } from 'react-redux';
 
-import reducers from './pages/Main/reducers-main'
+import reducers from './components/main/reducers-main'
 import Routes from './config/routes'
 import { createHashHistory } from 'history'
 

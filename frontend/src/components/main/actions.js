@@ -8,7 +8,8 @@ import 'moment/locale/pt-br'
 
 import {
   TO_TRANSLATE,
-  HANDLE_INTERNATIONALIZATION
+  HANDLE_INTERNATIONALIZATION,
+  HANDLE_HISTORY
 } from './constants'
 
 export function applyLocaleInMoment(locale) {
@@ -54,4 +55,8 @@ export function handleLocale(params) {
         console.error('Failure to load language data', e)
       })
   }
+}
+
+export function handleHistory(history) {
+  return { type: HANDLE_HISTORY, payload: history }
 }

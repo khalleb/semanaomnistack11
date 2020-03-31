@@ -8,6 +8,5 @@ module.exports = {
       .where('ong_id', ong_id)
       .select('*');
     callback({ incidents })
-    //return response.json(incidents);
   }
 }

@@ -5,7 +5,7 @@ const moduleRoute = '/sessions'
 
 const callbackFn = (res) => (data) => { res.send(data) }
 
-routes.get(`${moduleRoute}`, (req, res) => {
+routes.post(`${moduleRoute}`, (req, res) => {
   Controller.create(req, res, callbackFn(res));
 })
 

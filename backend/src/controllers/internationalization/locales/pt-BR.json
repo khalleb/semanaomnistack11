@@ -15,5 +15,22 @@
     "city": "Cidade",
     "uf": "UF",
     "newRegister": "Cadastar"
+  },
+  "profile": {
+    "welcome": "Bem-vindo",
+    "registerNewCase": "Cadastrar novo caso",
+    "registeredCases": "Casos cadastrados",
+    "case": "CASO",
+    "description": "DESCRIÇÃO",
+    "value": "VALOR"
+  },
+  "incident": {
+    "registerNewCase": "Cadastrar novo caso",
+    "labelInfo": "Descreva o caso detalhdamenten para encontrar um héroi para resolver isso",
+    "backToHome": "Voltar para home",
+    "caseTitle": "Título de caso",
+    "description": "Descrição",
+    "value": "Valor",
+    "newRegister": "Cadastar"
   }
 }

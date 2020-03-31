@@ -7,6 +7,5 @@ module.exports = {
   get: (request, response) => {
     const { locale = 'pt-BR', flag } = request.query;
     response({ locale: _.pick(locales, [locale]), flag })
-    //return response.json({ locale: _.pick(locales, [locale]), flag });
   }
 }
