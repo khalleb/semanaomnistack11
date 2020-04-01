@@ -8,10 +8,11 @@ export async function handleOng() {
     const { settings: { api, $t, history }, form: { ong_form } } = getState();
     const url = `${api}/ongs`;
     const values = _.get(ong_form, 'values', {});
+    const contact = _.get(values, 'whatsapp') ? _.get(values, 'whatsapp').replace(/[^0-9]+/g, '') : '';
     const data = {
       name: _.get(values, 'name'),
       email: _.get(values, 'email'),
-      whatsapp: _.get(values, 'whatsapp'),
+      whatsapp: contact,
       city: _.get(values, 'city'),
       uf: _.get(values, 'uf')
     }

@@ -3,7 +3,7 @@ import { reduxForm } from 'redux-form';
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { Link } from 'react-router-dom';
-import { FiPower, FiTrash2 } from 'react-icons/fi'
+import { FiPower, FiTrash2, FiList } from 'react-icons/fi'
 import _ from 'lodash'
 import * as actions from './actions'
 import { finishSession } from '../auth/actions'
@@ -35,8 +35,14 @@ class Ong extends Component {
           </button>
         </header>
         <h1>{$t('profile.registeredCases')}</h1>
+        {(!_.get(this, 'props.incidents') || _.isEmpty(this.props.incidents) || _.size(this.props.incidents) < 1) && (
+          <div className="empty-list">
+            <FiList size={250} color="#a8a8b3" />
+          </div>
+        )
+        }
         <ul>
-          {(_.get(this, 'props.incidents', [])).map(incident => (
+          {_.get(this, 'props.incidents', []).map(incident => (
             <li key={_.get(incident, 'id')}>
               <strong>{$t('profile.case')}:</strong>
               <p>{_.get(incident, 'title')}</p>
