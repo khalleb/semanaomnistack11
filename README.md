@@ -19,7 +19,6 @@
 <p align="center">
   <a href="#-project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#rocket-Technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-how-to-contribute">How to contribute</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
 
 <br>
@@ -48,12 +47,3 @@ This project was developed with the following technologies:
 - [Redux](https://redux.js.org/)
 - [React Native](https://facebook.github.io/react-native/)
 - [Expo](https://expo.io/)
-
-## 🤔 How to contribute
-
-- Make a fork;
-- Create a branck with your feature: `git checkout -b my-feature`;
-- Commit changes: `git commit -m 'feat: My new feature'`;
-- Make a push to your branch: `git push origin my-feature`.
-
-After merging your receipt request to done, you can delete a branch from yours.

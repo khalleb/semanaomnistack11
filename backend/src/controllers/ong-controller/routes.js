@@ -20,7 +20,7 @@ routes.post(`${moduleRoute}`, celebrate({
     city: Joi.string().required(),
     uf: Joi.string().required().length(2),
   })
-}), requireAuth, (req, res) => {
+}), (req, res) => {
   Controller.create(req, res, callback(res))
 })
 

@@ -15,7 +15,7 @@
   },
   "ong": {
     "register": "Cadastro",
-    "labelInfo": "Faça seu cadastro, entre na platforma e ajude pessoas a encontrarem os casos de sua ONG.",
+    "labelInfo": "Faça seu cadastro, entre na plataforma e ajude pessoas a encontrarem os casos de sua ONG.",
     "iRaveRegistration": "Já tenho cadastro",
     "nameONG": "Nome da ONG",
     "email": "E-mail",
@@ -47,9 +47,9 @@
   },
   "incident": {
     "registerNewCase": "Cadastrar novo caso",
-    "labelInfo": "Descreva o caso detalhdamenten para encontrar um héroi para resolver isso",
+    "labelInfo": "Descreva o caso detalhadamente para encontrar um herói para resolver isso.",
     "backToHome": "Voltar para home",
-    "caseTitle": "Título de caso",
+    "caseTitle": "Título do caso",
     "description": "Descrição",
     "value": "Valor",
     "newRegister": "Cadastar",
