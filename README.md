@@ -43,6 +43,7 @@ This project was developed with the following technologies:
 - [Celebrate](https://github.com/arb/celebrate/) 
 - [Jestejs](https://jestjs.io/) 
 - [React](https://reactjs.org)
+- [Redux](https://redux.js.org/)
 - [React Native](https://facebook.github.io/react-native/)
 - [Expo](https://expo.io/)
 
