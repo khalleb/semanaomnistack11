@@ -9,13 +9,14 @@ export async function handleSession() {
     const url = `${api}/sessions`;
     const values = _.get(logon_form, 'values', {});
     const data = {
-      id: _.get(values, 'idOng')
+      username: _.get(values, 'idOng'),
+      password: "a123"
     }
     await axios.post(url, data)
       .then(async function (response) {
         if (_.get(response, 'data.ong')) {
-          localStorage.setItem('_TOKEN', _.get(values, 'idOng'))
-          await dispatch([{ type: ONG_AUTH, payload: _.get(response, 'data.ong.name', '') }])
+          localStorage.setItem('_TOKEN', _.get(response, 'data.ong.token'))
+          await dispatch([{ type: ONG_AUTH, payload: _.get(response, 'data.ong') }])
           history.push('/profile');
         }
       })

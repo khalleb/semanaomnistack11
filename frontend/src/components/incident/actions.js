@@ -4,14 +4,15 @@ import { toastr } from 'react-redux-toastr';
 
 export async function handleIncident() {
   return async (dispatch, getState) => {
-    const { settings: { api, $t, history }, form: { incident_form } } = getState();
+    const { settings: { api, $t, history }, form: { incident_form }, session: { ongAuth } } = getState();
     const url = `${api}/incidents`;
     const values = _.get(incident_form, 'values', {});
     const ongId = localStorage.getItem('_TOKEN');
     const data = {
       title: _.get(values, 'title'),
       description: _.get(values, 'description'),
-      value: _.get(values, 'value')
+      value: _.get(values, 'value'),
+      ong_id: _.get(ongAuth, 'id')
     }
     await axios.post(url, data, { headers: { Authorization: ongId } })
       .then(async function (response) {

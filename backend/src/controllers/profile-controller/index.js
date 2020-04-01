@@ -2,11 +2,13 @@ const connection = require('../../database/connection');
 
 module.exports = {
   async list(request, response, callback) {
-    const ong_id = request.headers.authorization;
+    const params = request.body;
+    const { idOng } = params;
 
     const incidents = await connection('incidents')
-      .where('ong_id', ong_id)
+      .where('ong_id', idOng)
       .select('*');
+
     callback({ incidents })
   }
 }

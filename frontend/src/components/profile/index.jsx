@@ -28,7 +28,7 @@ class Ong extends Component {
       <div className="profile-container">
         <header>
           <img src={logoImg} alt="Be the hero" />
-          <span>{$t('profile.welcome')}, {_.get(session, 'ongAuth')} </span>
+          <span>{$t('profile.welcome')}, {_.get(session, 'ongAuth.name')} </span>
           <Link className="button" to="/incidents/new">{$t('profile.registerNewCase')}</Link>
           <button onClick={this.finishSession} type="button">
             <FiPower size={18} color="#E02041" />

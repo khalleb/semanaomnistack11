@@ -1,8 +1,11 @@
 const express = require('express');
 const { celebrate, Joi, Segments } = require('celebrate');
+const passport = require('passport');
 const routes = express.Router();
 const Controller = require('./')
 const moduleRoute = '/incidents'
+
+const requireAuth = passport.authenticate('jwt', { session: false })
 
 const callbackFn = (res) => (data) => { res.send(data) }
 
@@ -22,7 +25,7 @@ routes.delete(`${moduleRoute}/:id`, celebrate({
   [Segments.PARAMS]: Joi.object().keys({
     id: Joi.number().required()
   })
-}), (req, res) => {
+}), requireAuth, (req, res) => {
   Controller.delete(req, res, callbackFn(res))
 })
 

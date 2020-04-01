@@ -2,13 +2,18 @@ import axios from "axios";
 import _ from 'lodash';
 import { LIST_INCIDENTS } from './constants';
 import { toastr } from 'react-redux-toastr';
+import { authHeader } from '../utils/http'
+
+
 
 export async function listIncidents() {
   return async (dispatch, getState) => {
-    const { settings: { api, $t } } = getState();
-    const url = `${api}/profile`;
-    const ongId = localStorage.getItem('_TOKEN');
-    await axios.get(url, { headers: { Authorization: ongId } })
+    const { settings: { api, $t }, session: { ongAuth } } = getState();
+    const url = `${api}/profile/list`;
+    const params = {
+      idOng: _.get(ongAuth, 'id')
+    }
+    await axios.post(url, params, authHeader())
       .then(async function (response) {
         if (_.get(response, 'data.incidents')) {
           await dispatch({ type: LIST_INCIDENTS, payload: _.get(response, 'data.incidents') });
@@ -27,8 +32,7 @@ export async function removeIncident(id) {
       return
     }
     const url = `${api}/incidents/${id}`;
-    const ongId = localStorage.getItem('_TOKEN');
-    await axios.delete(url, { headers: { Authorization: ongId } })
+    await axios.delete(url, authHeader())
       .then(async function (response) {
         if (_.get(response, 'data.incidents')) {
           await dispatch({ type: LIST_INCIDENTS, payload: _.get(response, 'data.incidents') });

@@ -1,16 +1,21 @@
-const connection = require('../../database/connection');
+const _ = require('lodash');
+const jwt = require('jwt-simple');
+const config = require('../../config/config');
+
+function tokenForOng(user) {
+  const timestamp = new Date().getTime();
+  return jwt.encode({ uid: user.id, iat: timestamp }, config.secret);
+}
 
 module.exports = {
-  async create(request, response, callback) {
-    const { id } = request.body;
-
-    const ong = await connection('ongs')
-      .where('id', id)
-      .select('name')
-      .first();
-    if (!ong) {
-      return response.status(400).json({ error: 'Não encontrado uma ONG com esse ID' });
+  login: async (req, res) => {
+    let ong = _.cloneDeep(req.user);
+    let token = tokenForOng(ong);
+    if (!token) {
+      return res.status(403).send({ 'error': 'auth.errors.notAllowed' })
     }
-    callback({ ong })
-  }
+    ong.token = token;
+
+    res.json({ ong });
+  },
 }

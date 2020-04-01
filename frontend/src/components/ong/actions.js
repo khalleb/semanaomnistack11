@@ -1,6 +1,7 @@
-import axios from "axios"
-import _ from 'lodash'
-import { toastr } from 'react-redux-toastr'
+import axios from "axios";
+import _ from 'lodash';
+import { toastr } from 'react-redux-toastr';
+import { authHeader } from '../utils/http';
 
 export async function handleOng() {
   return async (dispatch, getState) => {
@@ -14,7 +15,7 @@ export async function handleOng() {
       city: _.get(values, 'city'),
       uf: _.get(values, 'uf')
     }
-    await axios.post(url, data)
+    await axios.post(url, data, authHeader())
       .then(async function (response) {
         toastr.success($t('messages.success'), $t('ong.success.successSave'));
         history.push('/');
