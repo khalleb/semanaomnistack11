@@ -41,6 +41,8 @@ This project was developed with the following technologies:
 - [SQLite](https://www.sqlite.org/index.html) 
 - [Knex.js](http://knexjs.org/) 
 - [Celebrate](https://github.com/arb/celebrate/) 
+- [JWT](https://jwt.io/)
+- [Lodash](https://lodash.com/)
 - [Jestejs](https://jestjs.io/) 
 - [React](https://reactjs.org)
 - [Redux](https://redux.js.org/)
